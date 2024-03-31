@@ -44,12 +44,14 @@ body {
   /* Input field styles */
 input[type="text"] {
     width: 80%;
+    margin-left: 10%;
     padding: 10px; /* Adjust padding for better spacing */
     font-size: 16px;
+   
     border: 2px solid #007bff; /* Blue border for input field */
     border-radius: 5px;
     box-sizing: border-box;
-    width: calc(100% - 30px); /* Include padding and border in width calculation */
+   
   }
   
   input[type="text"]:focus {
@@ -116,7 +118,7 @@ input[type="text"] {
     display: inline-block;
   }
   .custom-dropdown {
-    position: ;
+    position: center;
     top: 100%;
     width: 20%;
     left: 0;

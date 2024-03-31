@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './otherr.css'
 export default function Options({question,dispatch,answer}) {
     console.log(question.options);
   return (

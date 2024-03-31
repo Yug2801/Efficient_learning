@@ -258,10 +258,11 @@ const [topic, setTopic] = useState("");
   };
 
   return (
-    <main>
-      <h1>Chat AI Tutorial</h1>
+    <div className="">
+      <h1 className="text-center">Chat AI Tutorial</h1>
+      <div>
 
-      <section className="white-text proper-spacing">
+      <section className="white-text center proper-spacing">
         {chats.map((chat, index) => (
           <p key={index} className={chat.role === 'user' ? 'user-msg' : 'ai-msg'}>
             <span className="role">{chat.role.toUpperCase()}</span>
@@ -278,14 +279,17 @@ const [topic, setTopic] = useState("");
       </div>
 
       <form action="" onSubmit={(e) => chat(e, message)}>
-      <div className="input-wrapper">
+      <div className="input-wrapper  ">
+       
         <input
           type="text"
           name="message"
           value={message}
           placeholder="Type a message here and hit Enter..."
           onChange={(e) => {setMessage(e.target.value);setTopic(e.target.value);console.log(message);}}
+
         />
+        
         <div className="custom-dropdown">
           <div className="dropdown-header" onClick={() => setIsOpen(!isOpen)}>
             <div className="selected-value">{selectedValue}</div>
@@ -306,6 +310,7 @@ const [topic, setTopic] = useState("");
           )}
         </div>
       </div>
+      
       <div className="chat-buttons">
           <button className="visual-button" onClick={()=>{setlevel(0);setIsTyping(true);console.log(personType);}}>beginner</button>
           <button className="auditory-button" onClick={()=>{setlevel(1);setIsTyping(true);console.log(personType);}}>intermediate</button>
@@ -319,7 +324,8 @@ const [topic, setTopic] = useState("");
         </div>
         
       </form>
-    </main>
+    </div>
+    </div>
   );
 }
 

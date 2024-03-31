@@ -1,4 +1,5 @@
 import React from 'react';
+import './otherr.css'
 
 export default function StarttState({numQuestions,dispatch}) {
   return (
